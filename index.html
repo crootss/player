@@ -3,12 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Player</title>
+    <title>Video List Responsive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #181818;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            padding: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .video-card {
+            display: flex;
+            flex-direction: column;
+            background-color: #282828;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .video-card video {
+            width: 100%;
+            height: auto;
+        }
+
+        .video-info {
+            padding: 10px;
+        }
+
+        .video-title {
+            font-size: 1em;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .video-description {
+            font-size: 0.9em;
+            color: #aaaaaa;
+        }
+
+        @media (min-width: 600px) {
+            .video-card {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            
+            .video-info {
+                padding-left: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    <video width="640" height="360" controls>
-        <source src="florka.mp4" type="video/mp4">
-        Browser Anda tidak mendukung tag video.
-    </video>
+
+    <div class="container">
+        <div class="video-card">
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                Browser Anda tidak mendukung tag video.
+            </video>
+            <div class="video-info">
+                <div class="video-title">Mengapa Masyarakat Jawa Barat Bukan Orang Jawa?</div>
+                <div class="video-description">AMAS Ganteng - 158 rb ditonton - 4 minggu yang lalu</div>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+                Browser Anda tidak mendukung tag video.
+            </video>
+            <div class="video-info">
+                <div class="video-title">24 Jam Jadi NPC Palsu</div>
+                <div class="video-description">JAM #17 - 25 rb ditonton - 2 minggu yang lalu</div>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <video controls>
+                <source src="video3.mp4" type="video/mp4">
+                Browser Anda tidak mendukung tag video.
+            </video>
+            <div class="video-info">
+                <div class="video-title">Kalau Ketahuan, Aku Hapus Akun</div>
+                <div class="video-description">REN - 975 rb ditonton - 1 tahun yang lalu</div>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <video controls>
+                <source src="video4.mp4" type="video/mp4">
+                Browser Anda tidak mendukung tag video.
+            </video>
+            <div class="video-info">
+                <div class="video-title">EXT VGA Paling Simple</div>
+                <div class="video-description">Tech Channel - 123 rb ditonton - 3 bulan yang lalu</div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
