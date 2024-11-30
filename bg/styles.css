@@ -64,18 +64,21 @@ p {
     right: 20px;
     padding: 10px 20px;
     font-size: 1rem;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5); /* Transparansi 50% */
     color: white;
-    border: none;
-    border-radius: 5px;
+    border: 1px solid white; /* Batas putih untuk tampilan lebih baik */
+    border-radius: 5px; /* Membulatkan sudut */
     cursor: pointer;
     z-index: 2;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Efek hover */
 }
 
+/* Hover effect */
 #unmute-btn:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.7); /* Sedikit lebih gelap saat hover */
+    color: #f0f0f0; /* Sedikit lebih terang saat hover */
 }
+
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
